@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,18 +13,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [PageController::class, 'index']);
 
-Route::get('/', function () {
-    echo "selamat Datang";
-});
+Route::get('/about', [PageController::class, 'about']);
 
-Route::get('/about', function(){
-    echo "Nim : 2041720049
-        Nama : Cintya Aprila Fandini
-        Kelas : TI-2H"
-        ;
-});
-
-Route::get('/articles/{id}', function($id){
-    return "halaman Artikel dengan ID" . $id;
-});
+Route::get('/article/{id}', [PageController::class, 'article']);
