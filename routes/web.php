@@ -15,8 +15,27 @@ use App\Http\Controllers\ArticleController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [HomeController::class, 'index']);
+//Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/about', [AboutController::class, 'index']);
+//Route::get('/about', [AboutController::class, 'index']);
 
-Route::get('/articlepage/{id}', [ArticleController::class, 'index']);
+//Route::get('/articlepage/{id}', [ArticleController::class, 'index']);
+//Auth::routes();
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/home', function(){
+            return view('home');
+        });
+        
+        Route::get('/contact-us', function(){
+            return view('Contact');
+        });
+        
+        Route::get('/catalogs', function(){
+            return view('catalogs');
+        });
+        
+        Route::get('/team', function(){
+            return view('ourTeam');
+        });
