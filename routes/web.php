@@ -41,3 +41,6 @@ Route::get('/',[PostController::class, 'index']);
           //  return view('ourTeam');
        // });
 Route::get('/',[PostController::class, 'index']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
