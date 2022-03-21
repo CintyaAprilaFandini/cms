@@ -51,7 +51,7 @@
                     
                     <div class="tm-gallery">
                         <div class="row">
-                            @foreach($function as $f)
+                        @foreach($function as $f)
                             <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
                                 <a href="preview.html">
                                     <div class="tm-gallery-item-overlay">
@@ -146,4 +146,5 @@
                     </div>                    
                 </section>
             </div>
-@endsection
+            @endsection
+
